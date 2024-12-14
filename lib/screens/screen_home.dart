@@ -18,23 +18,44 @@ class ScreenHome extends StatelessWidget {
         width: double.infinity,
         height: 350,
         decoration: const BoxDecoration(color: Colors.white),
-        child: Container(
-          padding: const EdgeInsets.all(20),
-          child: const Row(
+          child: Column(
             children: [
-              CircleAvatar(child: Text("J")),
-              SizedBox(width: 10),
-              Text(
-                "Jovani Maytorena",
-                style: TextStyle(
-                    color: Color.fromARGB(255, 83, 83, 83),
-                    fontSize: 14,
-                    fontWeight: FontWeight.bold),
-              )
+              Container(
+                padding: const EdgeInsets.all(10),
+                child: const Row(
+                  children: [
+                    CircleAvatar(child: Text("J")),
+                    SizedBox(width: 10),
+                    Text(
+                      "Jovani Maytorena",
+                      style: TextStyle(
+                          color: Color.fromARGB(255, 83, 83, 83),
+                          fontSize: 14,
+                          fontWeight: FontWeight.bold),
+                    )
+                  ],
+                ),
+              ),
+              Container(
+                width: double.infinity,
+                height: 200,
+                child: Image.network("https://www.adslzone.net/app/uploads-adslzone.net/2021/12/www-vs-internet-800x419.jpg",
+              fit: BoxFit.cover,
+              ),
+              ),
+            Container(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                TextButton(onPressed: (){}, child: const Text("Me gusta", style: TextStyle(fontSize: 10.5,    fontWeight: FontWeight.bold))),
+                TextButton(onPressed: (){}, child: const Text("Comentario", style: TextStyle(fontSize: 10.5 , fontWeight: FontWeight.bold))),
+                TextButton(onPressed: (){}, child: const Text("Compartir" , style: TextStyle(fontSize: 10.5 , fontWeight: FontWeight.bold)))
+                ],
+              ),
+            ),
             ],
           ),
         ),
-      ),
       backgroundColor: Colors.grey[320],
     );
   }
